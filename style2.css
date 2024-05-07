@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #ffffff;
+    padding: 45px 0;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+header.scrolled {
+    background-color: rgba(51, 51, 51, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    display: inline-block;
+}
+
+nav a {
+    margin: 0 30px; /* Zwiększenie odstępu między zakładkami */
+    color: #fff; /* Zmiana koloru tekstu na biały */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: larger;
+}
+
+
+nav a:hover {
+    color: #ff6600;
+}
+
+
+section {
+    padding: 10px; /* zachowujemy wypełnienie na brzegach sekcji */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+.full-screen-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+.full-screen-image img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+#mapa {
+    width: 600px;
+    height: 450px;
+    margin: 0 auto; /* Ustawia marginesy poziome na auto, co powoduje wyśrodkowanie mapy */
+    display: block; /* Zapewnia, że mapa będzie wyświetlana jako blokowy element */
+}
+
+iframe#mapa {
+    width: 100%;
+    height: calc(100% - 450px); /* wysokość strony minus wysokość mapy */
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dodatkowe style */
+.additional-info {
+    text-align: center;
+}
+
+.additional-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-info ul li {
+    margin-bottom: 10px;
+}
+
+.additional-info img {
+    display: block;
+    margin: 0 auto;
+}
+
+#o-nas {
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#zajecia {
+    text-align: center; /* Wycentrowanie zawartości */
+    padding: 20px; /* Dodanie odstępu dla lepszej czytelności */
+    font-weight: bolder;
+    font-size: larger;
+}
+#zajecia ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bolder;
+    font-size: large;
+}
+#zajecia ul li {
+    margin-bottom: 20px; /* Dodanie odstępu między elementami listy */
+}
+
+#show-login-popup {
+    font-family: lato,sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #7a7a7a;
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    position: relative;
+    border: 3px solid #ffffff;
+    border-radius: 25px;
+    background-color: rgba(51, 51, 51, 0.9);
+    left: 800px;
+  }
+
+
+
+  .login-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px; /* Dopasuj szerokość okna do treści */
+}
+
+.login-popup h2 {
+    margin-top: 0;
+}
+
+.login-popup form input,
+.login-popup form button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.login-popup form button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-popup form button:hover {
+    background-color: #e65c00;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn i {
+    color: #333;
+    font-size: 16px;
+}
+
+.close-btn:hover i {
+    color: #555;
+}
+
+
+
+#email {
+    box-sizing: border-box;
+align-items: center;
+appearance: none;
+border: 2px solid rgb(5, 92, 207);
+border-radius: 78px;
+color: rgb(0, 37, 75);
+display: inline-flex;
+font: 700 17.55px LatoLatinWeb, sans-serif;
+height: 52.6406px;
+letter-spacing: normal;
+max-width: 100%;
+padding: 1.95px 31.2px 0px;
+padding-inline: 31.2px;
+z-index: 400;
+outline: rgb(0, 37, 75) none 0px;
+background-color: rgba(0, 0, 0, 0);
+margin-bottom: 31.2px;
+width: 416px;
+text-align: start;
+visibility: visible;
+}
+
+.haslo {
+    box-sizing: border-box;
+align-items: center;
+appearance: none;
+border: 2px solid rgb(5, 92, 207);
+border-radius: 78px;
+color: rgb(0, 37, 75);
+display: inline-flex;
+font: 700 17.55px LatoLatinWeb, sans-serif;
+height: 52.6406px;
+letter-spacing: normal;
+max-width: 100%;
+padding: 1.95px 31.2px 0px;
+padding-inline: 31.2px;
+z-index: 400;
+outline: rgb(0, 37, 75) none 0px;
+background-color: rgba(0, 0, 0, 0);
+margin-bottom: 31.2px;
+width: 416px;
+text-align: start;
+visibility: visible;
+}
+
+#przycisk-zaloguj {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font: 700 17.55px LatoLatinWeb, sans-serif;
+    align-items: center;
+    appearance: none;
+    border-radius: 78px;
+    display: flex;
+    height: 52.6406px;
+    letter-spacing: normal;
+    max-width: 100%;
+    padding: 1.95px 31.2px 0px;
+    padding-inline: 31.2px;
+    z-index: 400;
+    cursor: pointer;
+    justify-content: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    white-space: nowrap;
+    background: radial-gradient(80.57% 177.78% at 43.23% -101.85%, rgb(0, 132, 255) 42.37%, rgb(5, 92, 207) 100%) 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+    box-shadow: rgba(3, 41, 92, 0.3) -3.9px 7.8px 23.4px 0px;
+    width: 416px;
+    outline: rgb(255, 255, 255) none 0px;
+    text-align: center;
+    visibility: visible;
+}
+
+#game-section {
+    width: 670px;
+    height: 670px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.dumbbell img {
+    width: 100%; /* Dopasowuje szerokość obrazka do szerokości diva .dumbbell */
+    height: auto; /* Automatycznie dopasowuje wysokość obrazka proporcjonalnie */
+}
+
+
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left 0.1s ease; /* Dodaj animację płynnego przesunięcia */
+}
+
+
+.obstacle, .dumbbell {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.obstacle {
+    background-color: #808080;
+}
+
+.dumbbell {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #333;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 620px; /* Wysokość sekcji gry minus wysokość hantli */
+    }
+}
+
+
+h2 {
+    color:#333
+}
+
+
+
+body {
+    background-image: url('https://www.shutterstock.com/image-photo/fitness-girl-lifting-dumbbell-morning-600nw-401309230.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
